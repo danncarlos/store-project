@@ -1,0 +1,16 @@
+<div class="container">
+    <!-- Colocar icons das marcas aqui-->
+    <carousel
+      [height]="50"
+      [objectFit]="'cover'"
+      [autoplay]="true"
+      [dots]="false"
+      [loop]="true">
+
+      <div class="carousel-cell box item" *ngFor="let item of brandList">
+        <a >
+          <img class="imageH" src="{{item.assetUrl}}" alt="{{item.altString}}" title="{{item.altString}}">
+        </a>
+      </div>
+    </carousel>
+  </div>

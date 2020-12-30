@@ -1,0 +1,41 @@
+.box{
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    /* background-color: coral; */
+}
+
+/* .box:hover{
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+} */
+
+.carousel-cell{
+    margin: auto;
+}
+
+.container .box{
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+.container:hover .box {
+    /* background: #bbb; */
+    opacity: 0.279;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+.container .box:hover {
+    opacity: 1;
+    /* background: black; */
+    
+}
+

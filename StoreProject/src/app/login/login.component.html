@@ -1,0 +1,30 @@
+
+<Br><Br><Br><Br>
+    <div>
+        <form class="example-form" [formGroup]="loginForm">
+
+        <div class="erroMsg" *ngIf="loginErro">
+            Login inválido, por favor tente novamente
+        </div>
+        <br>
+
+        <mat-form-field class="example-full-width" appearance="outline" >
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline" >
+            <mat-label>Nome</mat-label>
+            <input type="name" matInput placeholder="Ex. Anderson Walt" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline" >
+            <mat-label>Telefone</mat-label>
+            <input type="tel" matInput placeholder="Ex. (11)999999999" [mask]="'(00) 00000-0000'" formControlName="phone">
+        </mat-form-field>
+
+        <button (click)="login()" mat-stroked-button color="primary">{{loginBtnTxt}}</button>
+    </form>
+</div>
+
+<!-- <Br><Br><Br><Br> -->

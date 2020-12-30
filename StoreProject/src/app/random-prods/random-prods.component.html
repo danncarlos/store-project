@@ -1,0 +1,49 @@
+<div id="prodList">
+
+    <div class="spiner" color="warn" *ngIf="produtoList == null || produtoList.length < 1">
+        <mat-spinner></mat-spinner>
+    </div>
+
+    <mat-grid-list cols="4" rowHeight="430px">
+        <mat-grid-tile  *ngFor="let item of produtoList">
+            <div id="prodItem">
+                <mat-card class="example-card mat-elevation-z2">
+                    <mat-card-header>
+                      <mat-card-title>{{item.nome}}</mat-card-title>
+                      <mat-card-subtitle class="priceLabel">R$ {{item.preco}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="{{item.imagemUrl}}" alt="Photo of a Shiba Inu" mat-card-image height="150">
+                    <mat-card-content>
+                      <p
+                        matTooltip="{{item.descricao}}">
+                        <!-- {{item.descricao}} -->
+                        {{produtoDesc(item.descricao)}}
+                      </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <!-- Fazer com que ao clicar em comprar redirecionar para pagina de produto -->
+                        <button mat-button
+                            (click)="btnComprar(item)"
+                            matTooltip="Adicionar ao Carrinho"
+                            [matTooltipPosition]="'above'">
+                            <span class="material-icons">add_shopping_cart</span>
+                            COMPRAR
+                        </button>
+
+                        <!-- Fazer com que ao clicar em fav adicionar na lista de favoritos -->
+                        <button mat-button
+                            (click)="addToFavorite(item)"
+                            [hidden]="0"
+                            matTooltip="Adicionar aos favoritos"
+                            [matTooltipPosition]="'above'">
+                            <!-- <span class="material-icons">favorite</span> *ngIf="item.isFav == false"-->
+                            <span class="material-icons">favorite_border</span>
+                            <!-- <span class="material-icons" *ngIf="item.isFav == true">favorite</span> -->
+                        </button>
+
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

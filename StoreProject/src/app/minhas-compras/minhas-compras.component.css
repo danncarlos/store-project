@@ -1,0 +1,9 @@
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+}
+
+.pHistory{
+    padding-left: 20px;
+    width: 95%;
+    /* background-color: darkcyan; */
+}

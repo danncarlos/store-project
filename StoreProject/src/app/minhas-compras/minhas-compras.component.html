@@ -1,0 +1,69 @@
+<div class="pHistory">
+    <div *ngIf="comprasList == null || comprasList.length < 1">
+        Não há dados para serem exibidos. Preencha seus dados para buscar seu histórico de compras.
+        <app-login [metodo]="'acesso'"></app-login>
+
+    </div>
+    <mat-accordion *ngIf="comprasList != null">
+        <div>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState = false" *ngFor="let item of comprasList">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <!-- Self aware panel -->
+                    Compra  -   {{item.id}}
+                </mat-panel-title>
+                <mat-panel-description>
+                    <!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
+                    R$ {{item.totalCompra}}
+                </mat-panel-description>
+                
+                </mat-expansion-panel-header>
+
+                <b>
+                    <mat-grid-list cols="3" rowHeight="5:1">
+                        <mat-grid-tile>Produto</mat-grid-tile>
+                        <mat-grid-tile>Valor Unitário (R$)</mat-grid-tile>
+                        <mat-grid-tile>Quantidade Comprada</mat-grid-tile>
+                    </mat-grid-list>
+                </b>
+                <div class="buyItems" *ngFor="let produto of item.compras">
+                    <p>
+                        <mat-grid-list cols="3" rowHeight="7:1">
+                            <mat-grid-tile>{{produto.produto.nome}}</mat-grid-tile>
+                            <mat-grid-tile>R$ {{produto.produto.preco}}</mat-grid-tile>
+                            <mat-grid-tile>{{produto.quantidade}}</mat-grid-tile>
+                        </mat-grid-list>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </div>
+    </mat-accordion>
+    
+</div>
+<!-- <div class="pHistory">
+    <mat-accordion>
+        <div *ngFor="let item of compras">
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+
+                    Compra - {{item.id}}
+                </mat-panel-title>
+                <mat-panel-description>
+
+                    R$ {{item.total}}
+                </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div class="buyItems" *ngFor="let produto of item.produtos">
+                    <p>
+                        {{produto.produto.prodName}}    -   R$ {{produto.produto.prodPreco}}
+                    </p>
+                </div>
+            </mat-expansion-panel>
+
+        </div>
+    </mat-accordion>
+    
+</div> -->

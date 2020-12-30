@@ -1,0 +1,45 @@
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+.example-form {
+  margin: auto;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+button{
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.fillBox{
+  display:flex;
+  flex-direction:column;
+
+}
+
+.wrapper {
+  /* background-color: rgba(0, 0, 0, .4); */
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 80%; /* 2 */
+  /* min-height: 90%; */
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
+}
+
+.erroMsg{
+  background-color: rgba(206, 36, 36, 0.226);
+  color: black;
+
+  border-radius: 2px;
+  margin: auto;
+}

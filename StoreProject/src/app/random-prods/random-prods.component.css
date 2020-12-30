@@ -1,0 +1,26 @@
+#prodList{
+    margin: auto;
+    /* background-color: aqua; */
+}
+
+.prodItem{
+    background-color: darkred;
+}
+
+
+.example-card {
+    max-width: 250px;
+  }
+ 
+.priceLabel{
+    font-weight: bold;
+
+}
+.mat-tooltip-panel{
+    background-color: darkcyan !important;
+    color: darkred !important;
+}
+
+.mat-spinner{
+    margin: auto;
+  }

@@ -1,0 +1,47 @@
+<div class="example-container">
+
+  <mat-toolbar class="example-toolbar siteNav mat-elevation-z8">
+    <button mat-button (click)="sidenav.toggle()">
+      <span class="material-icons">
+        menu
+      </span>
+    </button>
+    <span style="color: darkslateblue;">Blue Modas</span>
+    <!-- <button mat-button [routerLink]="'/home'">
+      <span class="navItemText">Home</span>
+    </button> -->
+
+
+    <span class="example-spacer"></span>
+    <app-cart-button></app-cart-button> 
+
+  </mat-toolbar>
+  <br><br><br>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened class="example-sidenav" mat-elevation-z8
+                 [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
+                 [fixedBottomGap]="options.value.bottom" style="width: 230px;">
+      {{options.value.fixed ? 'Fixed' : 'Non-fixed'}} Sidenav
+
+      <br><br><br>
+
+        <mat-nav-list>
+          <mat-action-list *ngFor="let link of links">
+            <button mat-list-item (click)="navigateTo(link.navUrl)">
+              <a matLine>{{ link.linkTxt }}</a>
+              <span class="material-icons">{{link.icon}}</span>
+            </button>
+
+          </mat-action-list>
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content [formGroup]="options">
+      <br><br><br><br>
+      <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+ 
+</div>

@@ -1,0 +1,29 @@
+.flexFooter{
+    margin: auto;
+    text-align: center;
+    color: whitesmoke;
+    background-color: black;
+}
+
+#legal{
+    opacity: 0.45;
+}
+
+#legal:hover{
+    opacity: 1;
+}
+
+.test{
+    color: yellow;
+    background-color: black;
+}
+
+footer {
+    flex-shrink: 0;
+    height: 50px;
+    background-color: #134c7d;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    bottom: 0;
+}

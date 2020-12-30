@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+.topImg{
+    width: 100%;
+    height: 300px;
+    background-color: red;
+    background-image: url('https://i.imgur.com/qtetFbe.jpg');
+    background-size: cover;
+}
+
+.subMenu-1 li{
+    font-family: 'PT Mono', monospace;
+    font-size: 18px;
+    color: cornsilk;
+    font-weight: bold;
+}
+
+.subMenu-1 li:hover{
+    color: crimson;
+}
+
+ul{
+    list-style-type: none;
+}

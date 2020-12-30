@@ -1,0 +1,67 @@
+<br><br><br><br>
+<mat-grid-list cols="4" rowHeight="55px">
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile>
+        <b>R$ {{totalPrice}}</b>
+
+        <button mat-button color="primary" disabled="{{isBuyDisable}}" (click)="completePurchase()">
+            <span class="material-icons">credit_card</span>
+            <span class="navItemText">Concluir Compra</span>
+        </button>
+    </mat-grid-tile>
+</mat-grid-list>
+<mat-divider></mat-divider>
+<div class="cart" *ngFor="let item of bag">
+
+    <mat-grid-list cols="4" rowHeight="55px">
+        <mat-grid-tile>
+            <img class="zoom" src="{{item.produto.imagemUrl}}" width="75px" height="75px"/>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            {{item.produto.nome}}
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <button mat-icon-button color="warn" aria-label="remove item to cart" (click)="removerProduto(item)">
+                <span class="material-icons">
+                    remove_circle_outline
+                </span>
+            </button>
+            
+            <mat-form-field class="example-full-width" style="width: 50px;">
+                <input min="0" matInput disabled value="{{item.quantidade}}"> 
+            </mat-form-field>
+
+            <button mat-icon-button color="primary" aria-label="add item to cart" (click)="addProduto(item)">
+                <span class="material-icons">
+                    add_circle_outline
+                </span>
+            </button>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            R$ {{item.produto.preco}}
+        </mat-grid-tile>
+        
+      </mat-grid-list>
+      <br>
+</div>
+
+<mat-divider></mat-divider>
+<mat-grid-list cols="4" rowHeight="55px">
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile>
+        <button mat-button color="warn" disabled="{{isBuyDisable}}" (click)="_clearBag()">
+            <span class="material-icons">credit_card</span>
+            <span>Limpar Carrinho</span>
+        </button>
+        
+    </mat-grid-tile>
+</mat-grid-list>
+

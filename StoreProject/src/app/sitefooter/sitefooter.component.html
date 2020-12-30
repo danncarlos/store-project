@@ -1,0 +1,30 @@
+<footer>
+  <div class="flexFooter">
+    <mat-grid-list cols="2" rowHeight="100px">
+      <mat-grid-tile>
+        <div id="legal">
+          © {{storeName}} - {{thisYear}}. Todos os direitos reservados. 
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div id="infoLocation">
+          <button mat-button (click)="openPaymentModal()">
+            <span class="material-icons">
+              payment
+              </span>
+            <span class="navItemText">
+              FORMAS DE PAGAMENTO
+            </span>
+          </button>
+          <button mat-button (click)="goToLink('https://fb.com')">
+            <span class="material-icons">facebook</span>
+          </button>
+          <button mat-button (click)="goToLink('https://twitch.tv')">
+            <span class="material-icons">sports_esports</span>
+          </button>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>  
+  </div>
+</footer>
+
