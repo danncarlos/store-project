@@ -6,6 +6,12 @@
 
 Você pode utilizar a api <b>/api/Produto/seedProducts</b> para fazer uma carga de produtos em um novo banco de dados
 
+Rode o código no projeto angular
+```cmd
+npm install
+```
+
+
 ### 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
 
