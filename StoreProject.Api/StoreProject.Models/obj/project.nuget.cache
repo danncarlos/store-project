@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "+rRJ15RLtP9MdAkN7LSAqcJBkXdbTWIWnNRq/2L9qfRsyxmaxboSuuWa49v4qfJ4sxBO+YYPdUoxi4vlgGN0PA==",
+  "success": true,
+  "projectFilePath": "D:\\_dev\\Store Project\\1 - Services\\StoreProject.Api\\StoreProject.Models\\StoreProject.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Home\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Home\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Home\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
