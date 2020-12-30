@@ -10,8 +10,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Angular](https://angular.io/)
 
 ### DEMO
-- [Blue Modas](https://www.r4g.team/storeproject/)
-- [API's (swagger)](https://www.r4g.team/store-api/docs/index.html)
+- <a href="https://www.r4g.team/storeproject/" target="_blank">Blue Modas</a>
+- <a href="https://www.r4g.team/store-api/docs/" target="_blank">API's (swagger)</a>
 
 ### Autor
 ---
