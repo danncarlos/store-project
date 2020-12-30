@@ -3,6 +3,9 @@
 </h1>
 <p align="center">projeto básico de e-commerce</p>
 
+
+Você pode utilizar a api <b>/api/Produto/seedProducts</b> para fazer uma carga de produtos em um novo banco de dados
+
 ### 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
 
